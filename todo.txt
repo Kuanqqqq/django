@@ -1,0 +1,1 @@
+Fix pc_shop folder couldn't in github
