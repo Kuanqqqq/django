@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'manufacturer.apps.ManufacturerConfig',
     'GPU',
-    'specifics'
+    'specifics',
+    'colorfield'
 ]
 
 MIDDLEWARE = [
