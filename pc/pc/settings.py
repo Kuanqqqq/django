@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'manufacturer.apps.ManufacturerConfig',
     'GPU',
     'specifics',
-    'colorfield'
+    'colorfield',
+    'CPU'
 ]
 
 MIDDLEWARE = [
