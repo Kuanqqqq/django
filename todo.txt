@@ -1,1 +1,3 @@
 Fix pc_shop folder couldn't in github
+
+Ignore node_modules when commit
