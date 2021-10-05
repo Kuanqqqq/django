@@ -5,4 +5,7 @@ from .models import *
 class GPUAdmin(admin.ModelAdmin):
     list_display = ['model']
 
+
+admin.site.register(Chipset)
+admin.site.register(CoreClock)
 admin.site.register(GPU)
