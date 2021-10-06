@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'GPU',
     'specifics',
     'colorfield',
-    'CPU'
+    'CPU',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
