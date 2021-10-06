@@ -4,13 +4,6 @@ from api import views
 
 
 urlpatterns = [
-    # path('auth/', views.obtain_auth_token, name='auth'),
-    path('get_all_brands/', views.get_all_brands, name='get_all_brands')
+    path('get_all_brands/', views.get_all_brands, name='get_all_brands'),
+    path('get_all_memory/', views.get_all_memory, name='get_all_memory'),
 ]
-
-# from django.conf.urls import url
-# from rest_framework.authtoken import views as drf_views
-
-# urlpatterns = [
-#     url(r'^auth$', drf_views.obtain_auth_token, name='auth'),
-# ]
