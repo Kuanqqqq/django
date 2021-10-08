@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'manufacturer.apps.ManufacturerConfig',
-    'GPU.apps.GPUConfig',
-    'specifics.apps.specificsConfig',
+    'GPU.apps.GpuConfig',
+    'specifics.apps.SpecificsConfig',
     'colorfield',
-    'CPU.apps.CPUConfig',
+    'CPU.apps.CpuConfig',
 ]
 
 MIDDLEWARE = [
