@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'specifics.apps.SpecificsConfig',
     'colorfield',
     'CPU.apps.CpuConfig',
-    'bootstrap5'
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
