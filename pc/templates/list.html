@@ -2,10 +2,10 @@
 {% block title %}PC BUILDER{% endblock%}
 {% block content %}
 {% comment %} <div class="table-responsive"> {% endcomment %}
-<div class="container" style="margin-top:100px">
+<div class="container" style="margin-top:150px">
     <div class="text-center table-responsive-sm">
         <h1>PC BUILDER</h1>
-        <table class="table">
+        <table class="display" id="test">
             <thead>
                 <tr>
                     <th>Component</th>
@@ -73,5 +73,11 @@
         </table>
     </div>
 </div>
-
+{% endblock %}
+{% block script %}
+    <script>
+        $(document).ready(function() {
+            $('#test').DataTable();
+        } );
+    </script>
 {% endblock %}
