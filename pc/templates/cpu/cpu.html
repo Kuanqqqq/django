@@ -5,9 +5,10 @@
     <div class="text-center table-responsive-sm">
         <h1>Choose A CPU</h1>
         {{cpu_lst}}
-        <table class="table" id="test">
+        <table class="table" id="dataTables-filter">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Core Count</th>
                     <th>Core Clock</th>
@@ -20,20 +21,38 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody>
+            {% comment %} <tbody>
                 <tr>
                     <td>
                     </td>
                 </tr>
-            </tbody>
+            </tbody> {% endcomment %}
         </table>
     </div>
 </div>
 {% endblock %}
 {% block script %}
     <script>
-$(document).ready(function() {
-    $('table.display').DataTable();
-} );
+        $(document).ready(function() {
+            $('#dataTables-filter').DataTable({
+                "lengthMenu": [[25, 50, 100], [25, 50, 100]],
+                "processing": true,
+                "serverSide": true,
+                "order": [[0, 'desc'],],
+                "ajax": "/products/get_all_cpus/",
+                "columns": [
+                    {data: "id"},
+                    {data: "name"},
+                    {data: "core_count"},
+                    {data: "core_clock"},
+                    {data: "boost_clock"},
+                    {data: "TDP"},
+                    {data: "integrated_graphics"},
+                    {data: "SMT"},
+                    {data: "rating"},
+                    {data: "price"},
+                ]
+            })
+        } );
     </script>
 {% endblock %}
