@@ -4,3 +4,5 @@ from .models import *
 
 admin.site.register(Memory)
 admin.site.register(Color)
+admin.site.register(Socket)
+admin.site.register(TDP)

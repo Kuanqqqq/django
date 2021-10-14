@@ -5,7 +5,7 @@
 <div class="container" style="margin-top:150px">
     <div class="text-center table-responsive-sm">
         <h1>PC BUILDER</h1>
-        <table class="display" id="test">
+        <table class="table" id="test">
             <thead>
                 <tr>
                     <th>Component</th>
@@ -76,8 +76,8 @@
 {% endblock %}
 {% block script %}
     <script>
-        $(document).ready(function() {
+        {% comment %} $(document).ready(function() {
             $('#test').DataTable();
-        } );
+        } ); {% endcomment %}
     </script>
 {% endblock %}

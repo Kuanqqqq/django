@@ -25,7 +25,7 @@ class CoreClock(models.Model):
     unit = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.clock + ' ' + self.unit
+        return str(self.clock.__str__() + ' ' + self.unit)
 
 
 class CPU(models.Model):
@@ -39,7 +39,7 @@ class CPU(models.Model):
 
 
     def __str__(self):
-        return self.brand.name
+        return self.brand.name + ' ' + self.series.name
 
 
 
