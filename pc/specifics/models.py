@@ -29,4 +29,4 @@ class TDP(models.Model):
     unit = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.number + ' ' + self.unit
+        return str(self.number) + ' ' + self.unit

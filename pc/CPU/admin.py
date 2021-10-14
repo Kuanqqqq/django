@@ -5,4 +5,6 @@ from .models import *
 admin.site.register(Series)
 admin.site.register(CoreCount)
 admin.site.register(CoreClock)
+admin.site.register(Brand)
+admin.site.register(IntegratedGraphics)
 admin.site.register(CPU)
