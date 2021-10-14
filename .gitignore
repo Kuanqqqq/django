@@ -1,6 +1,2 @@
 pc_shop
-pc/CPU/__pycache__/
-pc/GPU/__pycache__/
-pc/pc/__pycache__/
-pc/specifics/__pycache__/
-pc/manufacturer/migrations/__pycache__/
+**/__pycache__
