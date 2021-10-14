@@ -23,8 +23,8 @@ urlpatterns = [
     path('', home_page, name='home_page'),
     path('list/', list_page, name='list'),
     path('admin/', admin.site.urls),
-    path('products/', include('CPU.urls')),
-    path('products/', include('GPU.urls')),
+    path('products/', include('CPU.urls'), name='cpu'),
+    path('products/', include('GPU.urls'), name='gpu'),
 ]
 
 from . import  settings
