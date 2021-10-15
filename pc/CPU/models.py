@@ -44,6 +44,7 @@ class IntegratedGraphics(models.Model):
 
 
 class CPU(models.Model):
+    image = models.ImageField(upload_to='', blank=True)
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
     series = models.CharField(max_length=30, null=True)
     core_count = models.IntegerField(null=True)
@@ -55,6 +56,8 @@ class CPU(models.Model):
     socket = models.ForeignKey(Socket, null=True, on_delete=models.SET_NULL)
     max_supported_memory = models.ForeignKey(Memory,null=True, on_delete=models.SET_NULL)
 
+    def table_name(self):
+        return self.brand.name + ' ' + self.series
 
     def __str__(self):
         return self.brand.name + ' ' + self.series + ' ' + self.core_clock.__str__() + ' ' + str(self.core_count) + '-' + 'Core Processor'

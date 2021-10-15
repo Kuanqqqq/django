@@ -1,34 +1,35 @@
 {% extends 'base.html' %}
 {% block title %}Choose A CPU{% endblock%}
 {% block content %}
-<div class="container" style="margin-top:150px">
-    <div class="text-center table-responsive-sm">
-        <h1>Choose A CPU</h1>
-        {{cpu_lst}}
-        <table class="table" id="dataTables-filter">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Core Count</th>
-                    <th>Core Clock</th>
-                    <th>Boost Clock</th>
-                    <th>TDP</th>
-                    <th>Integrated Graphics</th>
-                    <th>SMT</th>
-                    <th>Rating</th>
-                    <th>Price</th>
-                    <th></th>
-                </tr>
-            </thead>
-            {% comment %} <tbody>
-                <tr>
-                    <td>
-                    </td>
-                </tr>
-            </tbody> {% endcomment %}
-        </table>
+<div class="col-lg-12">
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-8">
+        <div class="container" style="margin-top:150px">
+            <div class="text-center table-responsive-sm">
+                <h1>Choose A CPU</h1>
+                {{cpu_lst}}
+                <table class="table" id="dataTables-filter">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Core Count</th>
+                            <th>Core Clock</th>
+                            <th>Boost Clock</th>
+                            <th>TDP</th>
+                            <th>Integrated Graphics</th>
+                            <th>SMT</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
     </div>
+</div>
 </div>
 {% endblock %}
 {% block script %}
@@ -38,7 +39,7 @@
                 "lengthMenu": [[25, 50, 100], [25, 50, 100]],
                 "processing": true,
                 "serverSide": true,
-                "order": [[0, 'desc'],],
+                "order": [[0, 'asc'],],
                 "ajax": "/products/get_all_cpus/",
                 "columns": [
                     {data: "id"},
@@ -51,7 +52,8 @@
                     {data: "SMT"},
                     {data: "rating"},
                     {data: "price"},
-                ]
+                    {data: "action"},
+                ],
             })
         } );
     </script>

@@ -36,19 +36,20 @@ def get_all_cpus(request):
     for cpu in cpu_lst:
         row = {
             'id': cpu.id,
-            'name': cpu.__str__(),
-            'core_count': cpu.core_count,
-            'core_clock': str(cpu.core_clock),
-            'boost_clock': str(cpu.boost_clock),
-            'TDP': None,
-            'integrated_graphics': None,
-            'SMT': None,
+            'name': ("<img src=" + cpu.image.url + " with='100' height='100'>" + cpu.table_name()) if cpu.image else cpu.table_name(),
+            'core_count': cpu.core_count.__str__(),
+            'core_clock': cpu.core_clock.__str__(),
+            'boost_clock': cpu.boost_clock.__str__(),
+            'TDP': cpu.tdp.__str__(),
+            'integrated_graphics': cpu.integrated_graphics.__str__(),
+            'SMT': cpu.smt.__str__(),
             'rating': None,
-            'price': None
+            'price': None,
+            'action': "<a class='btn btn-success' href='#' role='button'>Add</a>",
         }
         data.append(row)
-    print(data)
     obj = {
+        'recordsFiltered': total_qty,
         'recordsTotal': total_qty,
         'data': data,
         }
