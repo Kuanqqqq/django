@@ -1,12 +1,32 @@
-from django.http.response import HttpResponse, JsonResponse
-from django.shortcuts import render
-from .models import CPU
-# Create your views here.
-
-def cpu(request):
-    #need to make the table to dynamic
-    return render(request, 'cpu/cpu.html')
-
+# --------------------------------------------------------------------------------------
+# When users open the page, automatically call a ajax function to load data from backend via path '/product/get_all_cpus' and render the table with returned data. 
+# 'def get_all_cpus(request)' could retrive all data about 'CPU' object and process data into a json object and return it.
+# --------------------------------------------------------------------------------------
+<script>
+        $(document).ready(function() {
+            // using ajax to call a function 'get_all_cpus' to retrive data then render them on table. 
+            $('#dataTables-filter').DataTable({
+                "lengthMenu": [[25, 50, 100], [25, 50, 100]],
+                "processing": true,
+                "serverSide": true,
+                "order": [[0, 'asc'],],
+                "ajax": "/products/get_all_cpus/",
+                "columns": [
+                    {data: "id"},
+                    {data: "name"},
+                    {data: "core_count"},
+                    {data: "core_clock"},
+                    {data: "boost_clock"},
+                    {data: "TDP"},
+                    {data: "integrated_graphics"},
+                    {data: "SMT"},
+                    {data: "rating"},
+                    {data: "price"},
+                    {data: "action"},
+                ],
+            })
+        } );
+    </script>
 
 def get_all_cpus(request):
     # ------------------------------------------------------
@@ -58,4 +78,3 @@ def get_all_cpus(request):
         'data': data,
         }
     return JsonResponse(obj, safe=False)
-    
