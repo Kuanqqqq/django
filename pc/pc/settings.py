@@ -25,9 +25,9 @@ MEDIA_URL = '/'
 SECRET_KEY = 'django-insecure-c0-9z72pmecgc0&0=xj!^1rb!ygd+pab5(hb2ss-bq1@-zoy5_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['pc-dev.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['pc-dev.us-west-2.elasticbeanstalk.com','127.0.0.1']
 
 
 # Application definition
