@@ -2,8 +2,3 @@ pc_shop
 **/__pycache__
 pc/pc/__pycache__/urls.cpython-39.pyc
 env
-
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
