@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}PC BUILDER{% endblock%}
 {% block content %}
-{% comment %} <div class="table-responsive"> {% endcomment %}
-<div class="container" style="margin-top:150px">
+<div class="container" style="margin-top:30px">
     <div class="text-center table-responsive-sm">
         <h1>PC BUILDER</h1>
         <table class="table" id="test">
@@ -16,6 +15,7 @@
                     <th>Tax</th>
                     <th>Price</th>
                     <th>Where</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -23,51 +23,135 @@
                     <td>
                         <a href="{% url 'cpu' %}">CPU</a>
                     </td>
+                    <td>
+                        {{ build.cpu }}
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{% if build.cpu %}<a class='btn btn-danger' role='button', href="{% url 'delete_component' name='cpu' %}">Delete</a>{% endif %}</td>
                 </tr>
                 <tr>
                     <td>
                         <a href="#">CPU Cooler</a>
                     </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>
                         <a href="#">Motherboard</a>
                     </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>
                         <a href="#">Memory</a>
                     </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>
                         <a href="#">Storage</a>
                     </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>
                         <a href="{% url 'gpu' %}">GPU</a>
                     </td>
+                    <td>
+                        {{ build.gpu }}
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                     <td>{% if build.gpu %}<a class='btn btn-danger' role='button', href="{% url 'delete_component' name='gpu' %}">Delete</a>{% endif %}</td>
                 </tr>
                 <tr>
                     <td>
                         <a href="#">Case</a>
                     </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>
                         <a href="#">Power Supply</a>
                     </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>
                         <a href="#">Operating System</a>
                     </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>
                         <a href="#">Monitor</a>
                     </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>

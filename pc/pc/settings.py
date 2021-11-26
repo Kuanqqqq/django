@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'specifics.apps.SpecificsConfig',
     'colorfield',
     'CPU.apps.CpuConfig',
+    'build.apps.BuildConfig',
     'bootstrap5',
 ]
 

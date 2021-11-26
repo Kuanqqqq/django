@@ -49,7 +49,7 @@ def get_all_cpus(request):
             'SMT': cpu.smt.__str__(),
             'rating': None,
             'price': None,
-            'action': "<a class='btn btn-success' href='#' role='button'>Add</a>",
+            'action': "<a class='btn btn-success' role='button', href='/build/add_component/cpu/" + str(cpu.id) + "/'>Add</a>",
         }
         data.append(row)
     obj = {

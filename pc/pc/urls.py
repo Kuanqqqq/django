@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('products/', include('CPU.urls'), name='cpu'),
     path('products/', include('GPU.urls'), name='gpu'),
+    path('build/', include('build.urls'), name='build'),
 ]
 
 from . import  settings
